@@ -222,7 +222,7 @@ class _InternalDayViewPageState<T extends Object?>
       height: widget.height,
       width: widget.width,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 50),
+        padding: const EdgeInsets.only(bottom: 0),
         child: Column(
           children: [
             fullDayEventList.isEmpty
