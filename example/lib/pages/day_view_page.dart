@@ -22,12 +22,22 @@ class _DayViewPageDemoState extends State<DayViewPageDemo> {
         selectedView: CalendarView.day,
       ),
       mobileWidget: Scaffold(
+        extendBodyBehindAppBar: true,
+        extendBody: true,
+        bottomNavigationBar: Container(
+          height: 0,
+          width: MediaQuery.of(context).size.width,
+          color: Colors.transparent,
+        ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           elevation: 8,
           onPressed: () => context.pushRoute(CreateEventPage()),
         ),
-        body: DayViewWidget(),
+        body: Scaffold(
+            extendBodyBehindAppBar: true,
+            extendBody: true,
+            body: DayViewWidget()),
       ),
     );
   }

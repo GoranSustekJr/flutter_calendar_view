@@ -18,6 +18,7 @@ class DayViewWidget extends StatelessWidget {
     return DayView(
       key: state,
       width: width,
+      padding: EdgeInsets.only(bottom: 50),
       startDuration: Duration(hours: 8),
       showHalfHours: true,
       heightPerMinute: 3,
@@ -52,6 +53,7 @@ class DayViewWidget extends StatelessWidget {
       ),
       verticalLineOffset: 0,
       timeLineWidth: 65,
+      scrollOffset: 50,
       showLiveTimeLineInAllDays: true,
       liveTimeIndicatorSettings: LiveTimeIndicatorSettings(
         color: Colors.redAccent,

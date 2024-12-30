@@ -33,6 +33,12 @@ class CreateEventPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "KAKA"),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "KAKAK"),
+        ],
+      ),
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
         child: Padding(
