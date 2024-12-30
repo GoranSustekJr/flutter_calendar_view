@@ -60,6 +60,9 @@ class DayView<T extends Object?> extends StatefulWidget {
   /// If not provided [CalendarConstants.epochDate] is default.
   final DateTime? minDay;
 
+  // Padding
+  final EdgeInsets? padding;
+
   /// Determines upper boundary user can scroll.
   ///
   /// If not provided [CalendarConstants.maxDate] is default.
@@ -277,6 +280,7 @@ class DayView<T extends Object?> extends StatefulWidget {
     this.endHour = Constants.hoursADay,
     this.keepScrollOffset = false,
     this.onTimestampTap,
+    this.padding,
   })  : assert(!(onHeaderTitleTap != null && dayTitleBuilder != null),
             "can't use [onHeaderTitleTap] & [dayTitleBuilder] simultaneously"),
         assert(timeLineOffset >= 0,
@@ -462,6 +466,7 @@ class DayViewState<T extends Object?> extends State<DayView<T>> {
                             key: ValueKey(
                                 _hourHeight.toString() + date.toString()),
                             width: _width,
+                            padding: widget.padding ?? EdgeInsets.zero,
                             liveTimeIndicatorSettings:
                                 _liveTimeIndicatorSettings,
                             timeLineBuilder: _timeLineBuilder,
